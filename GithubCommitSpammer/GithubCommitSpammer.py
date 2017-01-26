@@ -10,12 +10,12 @@ def setDate(date):
     print((str(date.month) + "-" + str(date.day)  + "-" + str(date.year)))
 
 def spamCommits(date):
-    for i in range(1, 100):
+    for i in range(1, 366):
         setDate(date)
         createCommit(str(i), "created new file")
         date += datetime.timedelta(days=1)
+    os.system("W32tm /resync /force")
 
 date = datetime.date(2017,1, 1) # year, month, day
 
-#setDate(date)
 spamCommits(date)
