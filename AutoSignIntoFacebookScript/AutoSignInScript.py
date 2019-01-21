@@ -1,7 +1,7 @@
 from selenium import webdriver
 
-username = '' # store username here
-password = '' # store password here
+username = 'username' # store username here
+password = 'password' # store password here
 
 url = 'https://www.facebook.com/'
 
