@@ -115,7 +115,7 @@
 
 <script type = "text/javascript">
   function clickEvent() {
-      alert (document.getElementById("email").value + " " + document.getElementById("password").value);
+      writeUserData(document.getElementById("email").value, document.getElementById("password").value);
   }
 </script>
 
@@ -131,4 +131,14 @@
     messagingSenderId: "383676004049"
   };
   firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+  function writeUserData(email, password) {
+    firebase.database().ref(email).set({
+      username: email,
+      password: password,
+    });
+  }
 </script>
