@@ -16,12 +16,12 @@ def deleteFiles(directory):
 
 def spamCommits(date):
     deleteFiles("C:\\Users\\risha\\OneDrive\\Documents\\GitHub\\Spam")
-    for i in range(1, 366):
+    for i in range(1, 366 * 3):
         setDate(date)
         createCommit(str(i), "created new file")
         date += datetime.timedelta(days=1)
     os.system("W32tm /resync /force")
 
-date = datetime.date(2017,1, 1) # year, month, day
+date = datetime.date(2011, 4, 26) # year, month, day
 
 spamCommits(date)
